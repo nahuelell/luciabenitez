@@ -722,9 +722,9 @@
       </div>
     </div>
     <div class="sobre-text reveal">
-      <span class="eyebrow">Sobre la materia</span>
-      <h2>Aprender haciendo, con la mirada puesta en Crespo.</h2>
-      <p>Soy <strong>Nahuel Lell</strong>, estudiante en Crespo, y armé esta página dentro de la materia <strong>Habilidades para el Futuro</strong>. La materia busca que combinemos tecnología, diseño y organización para resolver necesidades reales de nuestra comunidad.</p>
+      <span class="eyebrow" id="sobreEyebrow">Sobre la materia</span>
+      <h2 id="sobreTitulo">Aprender haciendo, con la mirada puesta en Crespo.</h2>
+      <p id="sobreSubtitulo">Soy <strong>Nahuel Lell</strong>, estudiante en Crespo, y armé esta página dentro de la materia <strong>Habilidades para el Futuro</strong>. La materia busca que combinemos tecnología, diseño y organización para resolver necesidades reales de nuestra comunidad.</p>
       <p>A lo largo de la cursada aprendimos a planificar tareas, trabajar en equipo y usar herramientas digitales para ayudar a emprendimientos y vecinos a tener presencia online.</p>
       <div class="sobre-stats">
         <div class="stat"><div class="num">3</div><div class="label">Servicios ofrecidos</div></div>
@@ -840,6 +840,21 @@
 </footer>
 
 <script>
+  // Cargar contenido editable desde content.json (lo administra /admin)
+  fetch('/content.json', { cache: 'no-store' })
+    .then(res => res.ok ? res.json() : null)
+    .then(data => {
+      if (!data || !data.sobreMateria) return;
+      const { eyebrow, titulo, subtitulo } = data.sobreMateria;
+      const elEyebrow = document.getElementById('sobreEyebrow');
+      const elTitulo = document.getElementById('sobreTitulo');
+      const elSubtitulo = document.getElementById('sobreSubtitulo');
+      if (eyebrow && elEyebrow) elEyebrow.textContent = eyebrow;
+      if (titulo && elTitulo) elTitulo.textContent = titulo;
+      if (subtitulo && elSubtitulo) elSubtitulo.textContent = subtitulo;
+    })
+    .catch(() => { /* si falla, queda el texto por defecto del HTML */ });
+
   // Menú móvil
   const menuBtn = document.getElementById('menuBtn');
   const navLinks = document.getElementById('navLinks');
