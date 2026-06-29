@@ -1,9 +1,0 @@
-{
-  "name": "habilidades-futuro-crespo",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Página de la materia Habilidades para el Futuro - Crespo, Entre Ríos",
-  "scripts": {
-    "dev": "vercel dev"
-  }
-}
