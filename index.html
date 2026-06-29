@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lucía Benítez — Habilidades para el Futuro</title>
-<meta name="description" content="Proyecto de la materia Habilidades para el Futuro — Crespo, Entre Ríos.">
+<title>Habilidades para el Futuro — Nahuel Lell</title>
+<meta name="description" content="Página oficial de la materia Habilidades para el Futuro — Crespo, Entre Ríos.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -302,6 +302,7 @@
     align-items:center;
     gap:8px;
     animation:float 5s ease-in-out infinite;
+    cursor:default;
   }
   .float-chip.c1{ top:4%; left:-2%; animation-delay:0s; }
   .float-chip.c2{ bottom:8%; right:-6%; animation-delay:1.2s; }
@@ -309,6 +310,22 @@
   @keyframes float{
     0%,100%{ transform:translateY(0); }
     50%{ transform:translateY(-10px); }
+  }
+  .float-chip.c1:hover{ animation:bounce-right 1s cubic-bezier(.34,1.8,.64,1) 1; }
+  .float-chip.c2:hover{ animation:bounce-left 1s cubic-bezier(.34,1.8,.64,1) 1; }
+  @keyframes bounce-right{
+    0%{ transform:translate(0,0); }
+    30%{ transform:translate(14px,-4px); }
+    55%{ transform:translate(4px,1px); }
+    75%{ transform:translate(10px,-2px); }
+    100%{ transform:translate(0,0); }
+  }
+  @keyframes bounce-left{
+    0%{ transform:translate(0,0); }
+    30%{ transform:translate(-14px,-4px); }
+    55%{ transform:translate(-4px,1px); }
+    75%{ transform:translate(-10px,-2px); }
+    100%{ transform:translate(0,0); }
   }
 
   .scroll-cue{
@@ -595,10 +612,6 @@
   .footer-bottom{
     border-top:1px solid rgba(255,255,255,.1);
     padding-top:24px;
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:12px;
     font-size:.82rem;
   }
 
@@ -654,7 +667,7 @@
   <nav class="nav">
     <div class="logo">
       <span class="logo-mark" aria-hidden="true"></span>
-      Lucía Benítez
+      Habilidades para el Futuro
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -679,8 +692,8 @@
   <div class="wrap">
     <div class="hero-copy reveal">
       <span class="eyebrow">Habilidades para el Futuro · Crespo, ER</span>
-      <h1>Diseño y construyo soluciones digitales <em>con raíces en Crespo</em>.</h1>
-      <p class="lead">Estudiante apasionada por la tecnología y el diseño. Mi proyecto de Habilidades para el Futuro combina creatividad, organización y herramientas digitales para ayudar a emprendimientos locales a mostrarse mejor en internet.</p>
+      <h1>La materia que conecta la escuela <em>con el mundo real</em>.</h1>
+      <p class="lead">Habilidades para el Futuro es el espacio donde aprendemos tecnología, organización y comunicación digital aplicadas a proyectos concretos para Crespo. Esta página fue creada por Nahuel Lell como parte de la cursada.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contacto">Hablemos por WhatsApp</a>
         <a class="btn btn-ghost" href="#servicios">Ver qué hago</a>
@@ -689,7 +702,7 @@
     </div>
     <div class="hero-visual reveal">
       <div class="hero-card">
-        <span class="tag">Proyecto escolar</span>
+        <span class="tag">Página de la materia</span>
         <h3>Habilidades para el Futuro</h3>
         <p>Edición 2026 · Crespo, Entre Ríos</p>
       </div>
@@ -704,19 +717,19 @@
   <div class="wrap">
     <div class="sobre-portrait reveal">
       <div class="initials">
-        <div class="big">LB</div>
-        <div class="role">Estudiante · Crespo, ER</div>
+        <div class="big">NL</div>
+        <div class="role">Nahuel Lell · Crespo, ER</div>
       </div>
     </div>
     <div class="sobre-text reveal">
-      <span class="eyebrow">Sobre mí</span>
-      <h2>Aprendiendo a transformar ideas en proyectos reales.</h2>
-      <p>Soy estudiante en Crespo y este sitio nació como proyecto final de la materia <strong>Habilidades para el Futuro</strong>. Me interesa todo lo que tiene que ver con diseño, organización de proyectos y comunicación digital.</p>
-      <p>A lo largo del año aprendí a planificar tareas, trabajar en equipo y usar herramientas digitales para resolver problemas concretos de mi comunidad, como ayudar a pequeños comercios a tener presencia online.</p>
+      <span class="eyebrow">Sobre la materia</span>
+      <h2>Aprender haciendo, con la mirada puesta en Crespo.</h2>
+      <p>Soy <strong>Nahuel Lell</strong>, estudiante en Crespo, y armé esta página dentro de la materia <strong>Habilidades para el Futuro</strong>. La materia busca que combinemos tecnología, diseño y organización para resolver necesidades reales de nuestra comunidad.</p>
+      <p>A lo largo de la cursada aprendimos a planificar tareas, trabajar en equipo y usar herramientas digitales para ayudar a emprendimientos y vecinos a tener presencia online.</p>
       <div class="sobre-stats">
         <div class="stat"><div class="num">3</div><div class="label">Servicios ofrecidos</div></div>
         <div class="stat"><div class="num">100%</div><div class="label">Compromiso local</div></div>
-        <div class="stat"><div class="num">2026</div><div class="label">Año del proyecto</div></div>
+        <div class="stat"><div class="num">2026</div><div class="label">Año de la cursada</div></div>
       </div>
     </div>
   </div>
@@ -768,7 +781,7 @@
     <div class="t-grid reveal-stagger">
       <div class="t-card">
         <div class="stars">★★★★★</div>
-        <p>"Lucía nos ayudó a armar la página de nuestro emprendimiento familiar. Quedó simple, clara y se ve muy bien desde el celular."</p>
+        <p>"Nahuel nos ayudó a armar la página de nuestro emprendimiento familiar. Quedó simple, clara y se ve muy bien desde el celular."</p>
         <div class="t-person">
           <div class="t-avatar" style="background:var(--amarillo)">MR</div>
           <div><div class="name">Marisa Roldán</div><div class="role">Dueña de almacén, Crespo</div></div>
@@ -813,16 +826,15 @@
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <div class="footer-brand">Lucía Benítez</div>
-        <p class="footer-brand-sub">Proyecto de la materia Habilidades para el Futuro, hecho con dedicación desde Crespo, Entre Ríos.</p>
+        <div class="footer-brand">Habilidades para el Futuro</div>
+        <p class="footer-brand-sub">Página de la materia, creada por Nahuel Lell, desde Crespo, Entre Ríos.</p>
       </div>
       <a class="footer-muni" href="https://www.crespo.gob.ar/" target="_blank" rel="noopener">
         <span class="sq" aria-hidden="true"></span> Sitio oficial de la Municipalidad de Crespo
       </a>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Lucía Benítez · Proyecto escolar, Crespo, Entre Ríos.</span>
-      <span>Hecho con HTML, CSS y JavaScript.</span>
+      <span>© 2026 Habilidades para el Futuro · Crespo, Entre Ríos.</span>
     </div>
   </div>
 </footer>
